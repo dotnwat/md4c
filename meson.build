@@ -8,7 +8,9 @@ project('md4c', 'c',
 includes = include_directories(['src'])
 
 libmd4c = library('md4c',
+    'src/entity.c',
     'src/md4c.c',
+    'src/md4c-html.c',
     include_directories: includes)
 
 md4c_dep = declare_dependency(
